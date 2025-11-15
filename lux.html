@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxury Room Record Form</title>
+</head>
+<body bgcolor="lightgoldenrodyellow">
+    <center>
+        <h2>🏨 Luxury Room Record Form</h2>
+
+        <form action="submit.html" method="post">
+            <table border="0" cellpadding="6" cellspacing="4">
+                <tr>
+                    <td><b>Full Name:</b></td>
+                    <td><input type="text" name="fullname" required></td>
+                </tr>
+
+                <tr>
+                    <td><b>Phone Number:</b></td>
+                    <td><input type="tel" name="phone" required></td>
+                </tr>
+
+                <tr>
+                    <td><b>Email:</b></td>
+                    <td><input type="email" name="email"></td>
+                </tr>
+
+                <tr>
+                    <td><b>Number of Guests:</b></td>
+                    <td><input type="number" name="guests" min="1" max="4" required></td>
+                </tr>
+
+                <tr>
+                    <td><b>Check-in Date:</b></td>
+                    <td><input type="date" name="checkin" required></td>
+                </tr>
+
+                <tr>
+                    <td><b>Check-out Date:</b></td>
+                    <td><input type="date" name="checkout" required></td>
+                </tr>
+
+                <tr>
+                    <td><b>Room View Preference:</b></td>
+                    <td>
+                        <input type="radio" name="view" value="Sea View" required> Sea View
+                        <input type="radio" name="view" value="Garden View"> Garden View
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Bed Type:</b></td>
+                    <td>
+                        <input type="radio" name="bed" value="King Bed" required> King Bed
+                        <input type="radio" name="bed" value="Queen Bed"> Queen Bed
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Payment Method:</b></td>
+                    <td>
+                        <select name="payment" required>
+                            <option value="">--Select--</option>
+                            <option>Credit Card</option>
+                            <option>Cash</option>
+                            <option>Mobile Payment</option>
+                            <option>Bank Transfer</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><b>Special Requests:</b></td>
+                    <td>
+                        <textarea name="request" rows="4" cols="25" placeholder="Any special needs..."></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <input type="submit" value="Submit Record">
+                        <input type="reset" value="Clear Form">
+                    </td>
+                </tr>
+            </table>
+            <table border="0" cellpadding="10" cellspacing="50" width="80%" bgcolor="lightgoldenrodyellow">
+                <tr>
+                    <td><h3> <a href="listofroom.html">Back to Menu</a></h3></td>
+                    <td><h3> <a href="menu.html">Back to home</a></h3></td>
+                                   <td><h3> <a href="login.html">logout</a></h3></td>
+                                   <td><h3> <a href="listofroom.html">previous</a></h3></td>
+                </tr>
+            </table>
+        </form>
+    </center>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workers Attendance Form</title>
+    <script>
+        function validateForm() {
+            const workerName = document.forms["attendanceForm"]["worker_name"].value;
+            const attendanceDate = document.forms["attendanceForm"]["attendance_date"].value;
+            const status = document.forms["attendanceForm"]["status"].value;
+
+            if (workerName === "" || attendanceDate === "" || status === "") {
+                alert("All fields must be filled out.");
+                return false;
+            }
+            return true; // Form is valid
+        }
+    </script>
+</head>
+<body bgcolor="gray">
+    <center>
+        <h1><marquee>WORKERS ATTENDANCE FORM</marquee></h1>
+        
+        <form name="attendanceForm" action="submit_attendance.php" method="post" onsubmit="return validateForm()">
+            <table border="1" cellpadding="10" cellspacing="0" width="60%" bgcolor="white">
+                <tr bgcolor="red">
+                    <th><font color="white">Worker Name</font></th>
+                    <th><font color="white">Date</font></th>
+                    <th><font color="white">Status</font></th>
+                    <th><font color="white">Comments</font></th>
+                </tr>
+                <tr bgcolor="#DDDDDD">
+                    <td>
+                        <input type="text" name="worker_name" required>
+                    </td>
+                    <td>
+                        <input type="date" name="attendance_date" required>
+                    </td>
+                    <td>
+                        <select name="status" required>
+                            <option value="">Select Status</option>
+                            <option value="Present">Present</option>
+                            <option value="Absent">Absent</option>
+                        </select>
+                    </td>
+                    <td>
+                        <textarea name="comments" rows="2" cols="20"></textarea>
+                    </td>
+                </tr>
+            </table>
+<table border="0" cellpadding="40" cell spacing="40"  width="40"><tr><td><h3><a href="submit atendance.html">submit_attendance</a></h3></td>
+    <td><h3><a href="menu.html">Back to Home</a></h3></td>
+    <td><h3><a href="login.html">logout</a></h3></td>
+        </tr>
+        </table>
+    </center>
+</body>
+</html>
